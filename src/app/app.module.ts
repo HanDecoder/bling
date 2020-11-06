@@ -8,6 +8,8 @@ import { MaterialModule } from './material.module';
 import { AppRouterModule } from './router.module';
 import { AppSidenavListComponent } from './app-sidenav-list/app-sidenav-list.component';
 import { ResultComponent } from './result/result.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { ResultComponent } from './result/result.component';
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    AppRouterModule
+    AppRouterModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
