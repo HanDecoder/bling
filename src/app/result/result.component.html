@@ -1,0 +1,11 @@
+
+<mat-card *ngIf="csrv.num">
+    <mat-card-content>
+        <div style="font-size: 20px;" *ngIf="csrv.inputValid">
+            {{csrv.num}}<sub>{{csrv.base}}</sub> = {{csrv.converted_number}}<sub>{{csrv.converted_base}}</sub>
+        </div>
+        <div style="font-size: 20px;" *ngIf="!csrv.inputValid">
+            <p>Input is not valid</p>
+        </div>
+    </mat-card-content>
+</mat-card>

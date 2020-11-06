@@ -1,0 +1,10 @@
+<div class="parent">
+
+    <mat-form-field appearance="outline" color="accent">
+      <mat-label>Number in Binary</mat-label>
+      <input matInput placeholder="Type in" #number>
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Enter the number you want to convert to Octal</mat-hint>
+    </mat-form-field>
+    <button  mat-raised-button color="accent" (click)="onClick(number.value)"  style="margin: 1px;">Convert</button>
+  </div>
