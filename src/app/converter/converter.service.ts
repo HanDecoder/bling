@@ -24,6 +24,7 @@ export class ConverterService {
             this.converted_base = 16;
             this.base = 2;
             this.converted_number = this.binaryToHex(this.num);
+            console.log(this.converted_number)
         }
         if(source == "binary" && result == "octal") {
             this.inputValid = validInput;
@@ -189,7 +190,7 @@ export class ConverterService {
             
             for(let i = 0; i != splitted_array.length; ++i) {
                 converted += hex_map[splitted_array[i]];
-            
+                console.log(hex_map[splitted_array[i]])
             }
         } else {
             //remove dot
