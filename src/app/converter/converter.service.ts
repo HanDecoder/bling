@@ -293,14 +293,13 @@ export class ConverterService {
     decimalToHex(num: string) {
         return (+num).toString(16).toUpperCase();
     }
-    hexToDecimal(hex): string {
-        
-        hex = hex.split(/\./);
-        var len = hex[1].length;
-        hex[1] = parseInt(hex[1], 16);
-        hex[1] *= Math.pow(16, -len);
-        return (parseInt(hex[0], 16) + hex[1]).toString();
-        
+    hexToDecimal(num: string): string {
+        let radix = 16;
+        var parts = num.split(".");
+        if (parts.length > 1) {
+          return (parseInt(parts[0], radix) + parseInt(parts[1], radix) / Math.pow(radix, parts[1].length)).toString();
+        }
+        return parseInt(parts[0], radix).toString();
     }
     hexToBinary(num: string) {
         let dec = this.hexToDecimal(num);

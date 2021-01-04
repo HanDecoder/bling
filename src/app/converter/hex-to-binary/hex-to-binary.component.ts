@@ -13,11 +13,9 @@ export class HexToBinaryComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClick(num: number) {
+  onClick(num: string) {
     let inputIsValid: boolean = true;
-    this.csrv.num = num.toString().trim();
-    
-    
+    this.csrv.num = num.trim();
     this.csrv.onProcess("hex", "binary", inputIsValid);
   }
 }
