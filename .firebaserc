@@ -1,5 +1,14 @@
 {
   "projects": {
-    "default": "bling-955b3"
+    "default": "bling-si"
+  },
+  "targets": {
+    "bling-si": {
+      "hosting": {
+        "bling": [
+          "bling-si"
+        ]
+      }
+    }
   }
 }
